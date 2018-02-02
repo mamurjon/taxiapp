@@ -25,4 +25,5 @@ Taxi app for drivers and passengers
         "created": "2018-02-02T14:10:27.504654+05:00",
         "status": "completed"
 }```
-#Here Customers can post, put and delete, and Drivers can put json to change status of the offer and when the offer is completed driver change the status of the offer to completed and puts offer price
+#Here Customers can post, put and delete, and Drivers can put json to change status of the offer and 
+#when the offer is completed driver change the status of the offer to completed and puts offer price
