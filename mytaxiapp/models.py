@@ -113,7 +113,7 @@ class Driver(User):
     rating = models.DecimalField(max_digits=2, decimal_places=1, default=Decimal('0.0'))
 
     def __str__(self):
-        return self.biography
+        return self.phone_number
 
 
 class Offer(BaseModel):
@@ -141,7 +141,7 @@ class Offer(BaseModel):
         (CUSTOMER_IN_THE_CAR, _('customer_in_the_car')),
         (OFFER_COMPLETED, _('completed'))
     )
-    status = models.CharField(max_length=15, choices=STATUS_GROUP, default=NEW)
+    status = models.CharField(max_length=127, choices=STATUS_GROUP, default=NEW)
 
     @classmethod
     def filter_active(cls):

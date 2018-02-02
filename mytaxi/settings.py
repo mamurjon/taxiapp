@@ -29,7 +29,7 @@ ENV_DEBUG = os.getenv('DEBUG', True)
 DEBUG = ENV_DEBUG
 
 ALLOWED_HOSTS = []
-INTERNAL_IPS = ('127.0.0.1',)
+INTERNAL_IPS = ()
 if DEBUG:
     ALLOWED_HOSTS += INTERNAL_IPS
 
@@ -46,12 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
 
-
     # third_party
-
+    'rest_framework',
 
     # internal_apps
     'mytaxiapp',
+    'api',
 ]
 
 MIDDLEWARE = [

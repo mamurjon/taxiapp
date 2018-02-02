@@ -3,7 +3,7 @@ from .models import (User, Driver, Car, Offer)
 
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['phone_number', 'email', 'first_name', 'last_name', 'year_of_birth', 'is_active', ]
+    list_display = ['id', 'phone_number', 'email', 'first_name', 'last_name', 'year_of_birth', 'is_active', ]
 
 
 class CarAdmin(admin.ModelAdmin):
