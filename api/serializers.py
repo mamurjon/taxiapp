@@ -76,6 +76,13 @@ class OfferSerializer(serializers.ModelSerializer):
 class OfferDetailSerializer(serializers.ModelSerializer):
     status = serializers.ChoiceField(choices=Offer.STATUS_GROUP)
     driver_phone_number = serializers.CharField(max_length=31, allow_null=True, allow_blank=True)
+    driver_car_number = serializers.CharField(max_length=31, allow_null=True, allow_blank=True)
+    start_place = serializers.ReadOnlyField()
+    finish_place = serializers.ReadOnlyField()
+    pickup_date = serializers.ReadOnlyField()
+    pickup_time = serializers.ReadOnlyField()
+    offer_price = serializers.ReadOnlyField()
+    created = serializers.ReadOnlyField()
 
     class Meta:
         model = Offer
@@ -84,13 +91,12 @@ class OfferDetailSerializer(serializers.ModelSerializer):
             'user',
             'driver',
             'driver_phone_number',
+            'driver_car_number',
             'start_place',
             'finish_place',
             'pickup_date',
             'pickup_time',
             'offer_price',
-            'location_from',
-            'location_to',
             'created',
             'status',
         )
