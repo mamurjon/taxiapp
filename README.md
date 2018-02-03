@@ -10,7 +10,8 @@ Taxi app for drivers and passengers
 #this lists all rides of the user
 
 ### GET, POST, PUT, DELETE, OPTIONS http://127.0.0.1:8000/v1/user/rides/1/
-#Example:
+##Example:
+
 
 ```{
         "id": 1,
