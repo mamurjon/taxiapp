@@ -2,7 +2,7 @@
 Taxi app for drivers and passengers
 
 #### Api documentaion
-#### Authentication is not requred for GET, POST and PUT options
+#### Authentication is requred for GET, POST and PUT options
 
 ### GET option gives User profile http://127.0.0.1:8000/v1/user/1/
 
@@ -27,3 +27,24 @@ Taxi app for drivers and passengers
 }```
 #Here Customers can post, put and delete, and Drivers can put json to change status of the offer and 
 #when the offer is completed driver change the status of the offer to completed and puts offer price
+
+### GET, POST, HEAD, OPTIONS http://127.0.0.1:8000/v1/offer/
+#Here drivers can see list of the offers that offered by passengers and can see all information about the offer. 
+#Also, they can check where are the passengers going.
+### GET, PUT, PATCH, DELETE, HEAD, OPTIONS http://127.0.0.1:8000/v1/offer/2/ 
+#This API gives detail view for drivers, Here drivers can accept offer and change the status of the offer by posting
+#when the offer is completed driver posts the cost of the offer and changes the status of the offer.
+```{
+    "id": 2,
+    "user": 1,
+    "driver": 3,
+    "driver_phone_number": null,
+    "driver_car_number": null,
+    "start_place": "sasda",
+    "finish_place": "sdfas",
+    "pickup_date": "2018-02-02",
+    "pickup_time": "14:24:49",
+    "offer_price": "fadsfasd",
+    "created": "2018-02-02T09:25:01.154648Z",
+    "status": "customer_in_the_car"
+}```
